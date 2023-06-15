@@ -1,0 +1,74 @@
+.div-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    align-items: center;
+}
+
+.icons {
+    justify-self: end;
+}
+
+.icons>i {
+    margin: 1px;
+}
+
+h1 {
+    justify-self: center;
+}
+
+.div-input {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.div-input>i {
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.div-input>button {
+    justify-self: start;
+}
+
+header {
+    background-color: #E1EBEE;
+    padding: 5px;
+}
+
+input {
+    border-radius: 8px;
+    margin-left: 8px;
+    line-height: 2;
+}
+
+i {
+    font-size: x-large;
+}
+
+@media(max-width: 700px) {
+    .icons {
+        display: none;
+    }
+    #hamburger {
+        display: block !important;
+        justify-self: end;
+    }
+}
+
+button {
+    border: none;
+    background-color: inherit;
+}
+
+.icons button,
+a {
+    margin-left: 5px;
+}
+
+a {
+    color: black;
+}
+
+.none {
+    display: none;
+}

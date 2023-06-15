@@ -1,0 +1,24 @@
+<div class="border-div">
+    <div class="center div-margin">
+        <h2 [class.header]="singleItem.Qty <= 0">{{singleItem.Name | uppercase}}</h2>
+    </div>
+    <div class="center div-margin more-margin">
+        <h3>{{singleItem.Discription}}</h3>
+    </div>
+    <div class="center div-margin">
+        <img [src]="singleItem.Img | img" class="responsive">
+    </div>
+    <div class="container div-margin bold">
+        <div class="self">
+            Price: {{singleItem.price | currency:'ILS':'symbol':'1.2'}}
+
+        </div>
+        <div class="self" style="margin-left: 5px;">
+            ID: {{singleItem.Id}}
+        </div>
+    </div>
+    <div class="center div-margin">
+        <button type="button" class="btn btn-secondary" (click)="clickEvent()">Add Me</button>
+    </div>
+
+</div>

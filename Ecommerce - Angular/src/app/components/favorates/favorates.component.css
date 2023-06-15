@@ -1,0 +1,18 @@
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+}
+
+.even {
+    background-color: darkgray;
+}
+
+.odd {
+    background-color: lightgray;
+}

@@ -1,0 +1,18 @@
+<app-header></app-header>
+<app-masseges-folder></app-masseges-folder>
+<div class="row" [class.opacity]="changeOpacity.opacity">
+    <div class="col-12">
+        <div class="row">
+            <div [ngClass]="openBucket.open ? 'col-8' : 'col-12'">
+                <router-outlet></router-outlet>
+            </div>
+
+            <div *ngIf="openBucket.open" class="col-3">
+                <app-bucket></app-bucket>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

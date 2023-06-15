@@ -1,0 +1,37 @@
+<div class="bucket-div">
+    <h1 class="center">My Bucket</h1>
+    <p *ngIf="bucket.length == 0" class="center">You can choose items!</p>
+    <div *ngFor="let bckt of bucket">
+
+
+        <div class="grid-container">
+            <div class="center div-margin">
+                <button type="button" class="btn btn-secondary" (click)="clickDec()">-</button>
+            </div>
+            <img [src]="bckt.Img | img" class="center">
+            <div class="details center">
+                <div> {{bckt.Name}}</div>
+                <div>{{bckt.sumOfItem | currency:'ILS':'symbol':'1.2'}}</div>
+            </div>
+            <div class="Qty center">
+                <div>
+                    <p>Qty:</p>
+                    <div class="">{{bckt.buyingQnt}}</div>
+                </div>
+            </div>
+            <div class="center div-margin">
+                <button type="button" class="btn btn-secondary" (click)="clickInc()">+</button>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div *ngIf="totalSum.buckt>0" class="align-items bottom">Total: {{totalSum.buckt | currency:'ILS':'symbol':'1.2'}}</div>
+
+
+
+</div>

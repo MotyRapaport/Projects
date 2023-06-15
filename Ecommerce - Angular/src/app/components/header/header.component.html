@@ -1,0 +1,33 @@
+<header>
+    <div class="div-container">
+
+        <div class="div-input">
+
+            <input type="text" [(ngModel)]="searchItem.search">
+            <button>
+                <i class="fa-solid fa-magnifying-glass" (click)="makeSearch(searchItem.search)"></i>
+            </button>
+
+        </div>
+
+        <h1>My Store</h1>
+        <div>
+            <button (click)="setPrice(.17)">Eilat</button>
+            <button (click)="setPrice(.30)">Club</button>
+            <button (click)="setPrice(.0)">Regular</button>
+        </div>
+        <div class="icons">
+            <button>
+                <i class="fa-solid fa-cart-shopping" (click)="toggle()"></i>
+            </button>
+            <a routerLink="home">
+                <i class="fa-solid fa-house-chimney"></i>
+            </a>
+
+            <a routerLink="favorates">
+                <i class="fa-solid fa-star"></i>
+            </a>
+        </div>
+        <i class="fa-solid fa-bars none" id="hamburger"></i>
+    </div>
+</header>

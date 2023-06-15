@@ -1,0 +1,26 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.border {
+    border: 1px solid gray;
+    margin-bottom: 3px;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+img {
+    margin: 5px;
+}

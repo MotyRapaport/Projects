@@ -1,0 +1,34 @@
+<div class="border-div" [class.opacity]="singleItem.Qty <= 0">
+    <div class="center div-margin">
+        <h2 [class.header]="singleItem.Qty <= 0">{{singleItem.Name | uppercase}}</h2>
+    </div>
+    <div class="center div-margin">
+        <img [src]="singleItem.Img | img" class="responsive">
+    </div>
+    <div class="container div-margin">
+        <div class="self">
+            {{singleItem.price | price: updatedPrice.num| currency:'ILS':'symbol':'1.2'}}
+
+        </div>
+        <div class="self" style="margin-left: 5px;">
+            ID: {{singleItem.Id}}
+        </div>
+    </div>
+    <div class="div-btn">
+        <div class="center div-margin">
+            <button type="button" class="btn btn-secondary" (click)="clickDec()">-</button>
+        </div>
+        <div class="center div-margin" (click)="addFav()">
+            <button class="btn btn-fav"><i class="fa-solid fa-star"></i></button>
+        </div>
+        <div class="center div-margin">
+            <button type="button" class="btn btn-secondary" (click)="clickInc()">+</button>
+        </div>
+    </div>
+
+    <div class="center div-margin margin-btm">
+        <a routerLink="/items/{{singleItem.Id}}">Read more!</a>
+    </div>
+
+
+</div>
